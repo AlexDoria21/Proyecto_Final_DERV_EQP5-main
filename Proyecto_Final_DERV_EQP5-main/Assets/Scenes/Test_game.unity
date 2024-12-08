@@ -796,7 +796,7 @@ MonoBehaviour:
     correctAnswerIndex: 3
   - questionText: "\xBFQu\xE9 habilidad sobresaliente tienen los ping\xFCinos?"
     answers:
-    - Son excelentes nadadore
+    - Son excelentes nadadores
     - Pueden volar largas distancias
     - "Pueden trepar \xE1rboles"
     - "Son los animales m\xE1s r\xE1pidos en la tierra"
@@ -1597,7 +1597,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a398cc7b28c7b064cbfcd8302e48abc3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.673
+  m_Volume: 0.355
   m_Pitch: 1
   Loop: 0
   Mute: 0
