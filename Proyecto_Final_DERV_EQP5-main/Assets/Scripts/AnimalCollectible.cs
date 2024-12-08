@@ -12,10 +12,13 @@ public class AnimalCollectible : MonoBehaviour
     private bool isPlayerInRange = false; // Para detectar si el jugador está cerca
     private static int collectedAnimals = 0; // Contador de animales recolectados
     public int totalAnimals = 5; // Total de animales a recolectar
+    
+    public Text Contador;// Contador de animales recolectados
 
     void Start()
     {
         dialogueUI.SetActive(false); // Ocultar el diálogo al inicio
+        UpdateContador();
     }
 
     void Update()
@@ -53,11 +56,22 @@ public class AnimalCollectible : MonoBehaviour
 
         // Opcional: Oculta el diálogo después de unos segundos
         StartCoroutine(HideDialogueAfterSeconds(3f));
+        collectedAnimals++; // Aumenta el contador de animales recolectados
+        UpdateContador(); // Actualiza el contador
 
-        if(++collectedAnimals >= totalAnimals){
+        if(collectedAnimals >= totalAnimals){
             // LoadScene(); // Carga la siguiente escena
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+
+    }
+
+    void UpdateContador()
+    {
+        //Contador.text = "Animales recolectados: " + collectedAnimals + "/" + totalAnimals;
+        int restantes = totalAnimals - collectedAnimals;
+        Contador.text = "Animales restantes: " + restantes;
+
     }
 
     System.Collections.IEnumerator HideDialogueAfterSeconds(float seconds)

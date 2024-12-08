@@ -67,7 +67,7 @@ public class TriviaManager : MonoBehaviour
     {
         if (score == questions.Length)
         {
-            Debug.Log("¡Ganaste la trivia! Pasando a la siguiente escena...");
+            Debug.Log("¡Ganaste la trivia! ¡Felicidades!");
             SceneManager.LoadScene("End_game");
         }
         else
